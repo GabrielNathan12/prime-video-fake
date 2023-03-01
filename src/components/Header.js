@@ -1,7 +1,7 @@
 import React from "react";
 
 import './Header.css';
-
+// Cabecalho do site, 
 export default({black}) =>{
     return (
         <header className={black ? 'black' : ''}>

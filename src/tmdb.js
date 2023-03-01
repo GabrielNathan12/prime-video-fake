@@ -12,11 +12,14 @@ const API_BASE = 'https://api.themoviedb.org/3';
 - documentario
 
 */ 
+// Carrega os dados que estao em formato json
 const basicFetch = async(endpoint)=>{
     const req = await fetch(`${API_BASE}${endpoint}`);
     const json = await req.json();
     return json;
 }
+
+// Pega os dados de acordo com sua URL
 
 export default{
     getHomeList : async() =>{
@@ -27,7 +30,7 @@ export default{
                
         },{
             slug:'treending',
-            title: 'Recomendados para Voce',
+            title: 'Recomendados para voce',
             items: await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
         },{
            slug:'toprated',
@@ -36,12 +39,12 @@ export default{
         },
         {
             slug:'action',
-            title: 'Acao',
+            title: 'Ação',
             items: await basicFetch(`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}`)
          },
          {
             slug:'comedy',
-            title: 'Comedia',
+            title: 'Comédia',
             items: await basicFetch(`/discover/movie?with_genres=35&language=pt-BR&api_key=${API_KEY}`) 
          },
          {

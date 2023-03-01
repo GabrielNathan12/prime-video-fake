@@ -4,13 +4,16 @@ import './FeaturedMovie.css'
 
 export default({item}) =>{
 
-
+    // Pega a data de lancamento do filme/serie
     let firstDate = new Date(item.first_air_date);
+    // Pega os generos de cada um
     let genres = [];
     for(let i in item.genres){
         genres.push(item.genres[i].name);
     }
+    // faz um for para guardar os generos de um filme especifico 
     return (
+        // coloca na tela o Nome do filme, sua descricao e seus generos
         <section className="featured" style={{
             backgroudSize: 'cover',
             backgroudPosition: 'center',

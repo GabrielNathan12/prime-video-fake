@@ -1,6 +1,6 @@
 import React from "react";
 import './MovieRow.css';
-
+//Responsavel por fazer a listagem dos filmes abaixo 
 export default({title, items}) =>{
     return(
         <div className="movieRow">
